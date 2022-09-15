@@ -39,6 +39,9 @@ const searchPokemon = event => {
 
     .then(data => data.json())
     .then(response => renderPokemonData(response))
+    //suponiendo que meten un pokemon que no existe, quiero una funcion para que 
+    //esas cosas no sucedan
+    .catch(err => renderNotFound())
 }
 
 const renderPokemonData = data => {
@@ -96,4 +99,17 @@ const renderPokemonStats = stats => {
     });
 
 }
+
+//para que diga que no se encontro el pokemon
+
+const renderNotFound = () => {
+    pokeName.textContent = "Pokémon no encontrado";
+    pokeImg.setAttribute('src', 'poke-shadow.png')
+    pokeImg.style.background = '#FFFF'
+    // como no va haber ni stats ni types ni id, pues no va a mostrar nada
+    pokeTypes.innerHTML = '';
+    pokeStats.innerHTML = '';
+    pokeId.textContent = '';
+}
+
 

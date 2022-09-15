@@ -46,6 +46,10 @@ input{
     border-radius: 50%;
 }
 
+.poke-img2{
+    width: 180px;
+}
+
 .poke-stats div{
     display:flex;
     justify-content: space-between;
