@@ -103,7 +103,7 @@ const renderPokemonStats = stats => {
 //para que diga que no se encontro el pokemon
 
 const renderNotFound = () => {
-    pokeName.textContent = "Pokémon no encontrado";
+    pokeName.textContent = "Pokémon no encontrado, revisa que este bien escrito jiji";
     pokeImg.setAttribute('src', 'poke-shadow.png')
     pokeImg.style.background = '#FFFF'
     // como no va haber ni stats ni types ni id, pues no va a mostrar nada
